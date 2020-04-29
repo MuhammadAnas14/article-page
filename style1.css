@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+*{
+box-sizing: border-box;
+margin:0;
+}
+
+.Articles{
+    padding: 100px 15px;
+    display: flex;
+     justify-content: center; 
+}
+/* .projects .section-title {
+    background-color: rgb(179, 70, 70);
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+} */
+.Articles .article-title h1{
+  
+    font-size: 2rem;
+    color: #000000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* .projects .icon{
+    background-image: url(images/3.jpeg);
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+} */
+
+.Articles .article-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.Articles .article-content .box{
+    padding-bottom: 10px;
+    flex: 0 0 calc(20.33% - 10px);
+    /* max-width: calc(20.33% + 50px); */
+    margin-bottom: 40px;
+    max-height: 600px;
+    border: 1px solid #0e0a0a;
+    text-align: left;
+    position: relative;
+    border-radius: 3px;
+    background-color: #EDEDED
+}
+.Articles .article-content .box::before{
+    content:'';
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0px;
+    width: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all .5s ease;
+}
+.Articles .article-content .box:hover::before{
+    width: 100%;
+}
+.Articles .article-content .box h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    background-color:#A9CF46;
+    padding: 5px;
+}
+.Articles .article-content .box h6{
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    background-color: #d3d3d3;
+}
+.Articles .article-content .box p{
+    text-align: justify;
+    font-size: 1em;
+    padding: 5px;
+    background-color: #EDEDED;
+    color: #555555;
+}
+p#Readmore{
+    display: none;
+}
+button#Read {
+    outline: thick;
+    font-size: medium;
+    color: green;
+    border-radius: 12px;
+    float: right;
+}
+/* .Articles .article-content .box .icon{
+    background-color: #fedb01;
+    text-align: center;
+} */
