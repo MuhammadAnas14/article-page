@@ -105,6 +105,15 @@ img.calender-flag {
     padding: 25px 18px;
 }
 
+img.ads {
+    padding: 20px;
+    width: 310px;
+}
+
+.left-part {
+    float: left;
+}
+
 h1 {
     margin-left: 25px;
 }
@@ -184,6 +193,10 @@ h1 {
     }
     .three {
         font-size: 10px;
+    }
+    img.ads {
+        padding: 20px;
+        width: 380px;
     }
 }
 
