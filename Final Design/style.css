@@ -24,6 +24,7 @@ h1 {
     margin-left: auto;
 }
 
+<<<<<<< HEAD
 .navbar {
   padding:0rem;
   margin-bottom:2rem;
@@ -102,6 +103,8 @@ The navbar toggle appears at this breakpoint */
     height: 100%;
     width: 70%;
 } */
+=======
+>>>>>>> 84887ced92f816b53d9b41b89eafde4460be153c
 .top {
     background-color: #ededed;
     color: #555;
@@ -218,7 +221,60 @@ img.new-calender-flag {
     padding-left: 0px;
 }
 
-@media only screen and (max-width: 768px) {
+h1.sec-head {
+    background-color: #ededed;
+    margin-top: 20px;
+    max-width: 99%;
+    border-left: 7px solid #a9cf46;
+    margin-left: -5px;
+}
+
+.box {
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    max-height: 600px;
+    text-align: left;
+    position: relative;
+    padding: 0 5px 0 5px;
+}
+
+h5.new-article-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    background-color: #A9CF46;
+    padding: 5px;
+}
+
+h6.art-head {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    background-color: #d3d3d3;
+}
+
+p.art-par {
+    font-size: 1em;
+    padding: 5px;
+    background-color: #EDEDED;
+    color: #555555;
+}
+
+button {
+    text-align: right;
+    padding: 5px;
+    float: right;
+    font-style: unset;
+    color: white;
+    background-color: #A9CF46;
+    font-family: sans-serif;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 767px) {
     .container {
         max-width: 98%;
         padding: 10px;
@@ -227,7 +283,7 @@ img.new-calender-flag {
         font-size: 14px;
     }
     img.icon {
-        width: 20px;
+        width: 27px;
         transform: rotate(180deg);
         /* padding: 5px; */
     }
@@ -235,8 +291,39 @@ img.new-calender-flag {
         padding-top: 2px;
     }
     img.icon-right {
-        width: 20px;
+        width: 27px;
         /* padding: 5px; */
+    }
+    .col-md-3.box {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    img.new-art {
+        width: 250px !important;
+    }
+    h5.new-article-date {
+        display: none !important;
+    }
+    h6.art-head {
+        padding: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #000000;
+        margin: 0;
+        background-color: #d3d3d3;
+        height=100px
+    }
+    p.art-par {
+        font-size: 1em;
+        padding: 5px;
+        color: #555555;
+        margin-bottom: 0px;
+    }
+    .left-part.col-md-1 {
+        text-align: center;
+    }
+    h1.sec-head {
+        margin-left: -10px;
     }
 }
 
@@ -248,7 +335,7 @@ img.new-calender-flag {
         max-width: 100%;
         /* padding-right: 20px;
     padding-left: 20px; */
-        padding: 0px;
+        padding: 2px;
     }
     .article-title {
         display: flex;
@@ -276,12 +363,12 @@ img.new-calender-flag {
         text-align: center;
     }
     img.icon {
-        width: 13px;
+        width: 23px;
         transform: rotate(180deg);
         /* padding: 5px; */
     }
     img.icon-right {
-        width: 13px;
+        width: 23px;
         /* padding: 5px; */
     }
     .one {
@@ -289,7 +376,7 @@ img.new-calender-flag {
     }
     .two {
         font-size: 10px;
-        padding-top: 0px;
+        padding-top: 5px;
     }
     .three {
         font-size: 10px;
@@ -298,57 +385,33 @@ img.new-calender-flag {
         padding: 20px;
         width: 330px;
     }
+    .col-md-3.box {
+        display: flex;
+    }
+    img.new-art {
+        width: 150px;
+    }
+    h5.new-article-date {
+        display: none;
+    }
+    h6.art-head {
+        display: none;
+    }
+    .row.justify-content-around {
+        max-width: 99%;
+        margin-left: 5px;
+    }
+    .left-part.col-md-1 {
+        text-align: center;
+    }
+    h1.sec-head {
+        margin-left: 1px;
+        max-width: 98%;
+    }
 }
 
-
-/* @media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
     html {
         font-size: 16px;
     }
-} */
-
-.box {
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    max-height: 600px;
-    text-align: left;
-    position: relative;
-    padding: 0 5px 0 5px;
-}
-
-h5 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #000000;
-    margin: 0;
-    background-color: #A9CF46;
-    padding: 5px;
-}
-
-h6 {
-    padding: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #000000;
-    margin: 0;
-    background-color: #d3d3d3;
-}
-
-p {
-    font-size: 1em;
-    padding: 5px;
-    background-color: #EDEDED;
-    color: #555555;
-    margin-bottom: 0px;
-}
-
-button {
-    text-align: right;
-    padding: 5px;
-    float: right;
-    font-style: unset;
-    color: white;
-    background-color: #A9CF46;
-    font-family: sans-serif;
-    border-radius: 8px;
 }
