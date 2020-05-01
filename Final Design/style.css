@@ -22,89 +22,83 @@ h1 {
     padding-left: 3%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 50px;
 }
 
-<<<<<<< HEAD
-.navbar {
-  padding:0rem;
-  margin-bottom:2rem;
+<<<<<<< HEAD .navbar {
+    padding: 0rem;
+    margin-bottom: 2rem;
 }
 
-.dark{
-  background-color: #21252e;
-  color: #ccc;
-}
-.dark-p{
-  font-size: 7px;
-  background-color: #21252e;
-  color: #ccc;
+.dark {
+    background-color: #21252e;
+    color: #ccc;
 }
 
-.copyrigth{
-  padding: 15px;
-  font-size: 15px;
+.dark-p {
+    font-size: 7px;
+    background-color: #21252e;
+    color: #ccc;
 }
+
+.copyrigth {
+    padding: 15px;
+    font-size: 15px;
+}
+
 .dropdown .dropdown-menu {
-  border-radius:0;
- }
-
+    border-radius: 0;
+}
 
 
 /* Medium devices (tablets, 768px and up) 
 The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  border-radius:0;
- }
-}
-.icons{
-  margin-right:8px;
-  padding: 10px;
-}
-.top-nav{
-  margin-left: 10px;
+
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        border-radius: 0;
+    }
 }
 
-.first-nav{
-  padding: 10px;
+.icons {
+    margin-right: 8px;
+    padding: 10px;
 }
 
-.second-nav{
-  padding: 20 px;
+.top-nav {
+    margin-left: 10px;
 }
+
+.first-nav {
+    padding: 10px;
+}
+
+.second-nav {
+    padding: 20 px;
+}
+
+
 /* .kogo{
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
   width: 200px;
 } */
-@media (max-width : 780){
-  .kogo{
-    display: none;
-  }
-}
-@media (max-width: 768px){
-  .scroll-down{
-    display: none;
-  }
+
+@media (max-width: 780) {
+    .kogo {
+        display: none;
+    }
 }
 
+@media (max-width: 768px) {
+    .scroll-down {
+        display: none;
+    }
+}
 
-/* .layout-wrap{
-    background-color: #fff;
-    position: relative;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
-    border: solid 1px;
-    margin-top: 100px;
-    height: 100%;
-    width: 70%;
-} */
-=======
->>>>>>> 84887ced92f816b53d9b41b89eafde4460be153c
 .top {
     background-color: #ededed;
     color: #555;
@@ -336,6 +330,7 @@ button {
         /* padding-right: 20px;
     padding-left: 20px; */
         padding: 2px;
+        margin-top: 4px;
     }
     .article-title {
         display: flex;
@@ -388,8 +383,8 @@ button {
     .col-md-3.box {
         display: flex;
     }
-    img.new-art {
-        width: 150px;
+    img.img-fluid.new-art {
+        max-width: 150px;
     }
     h5.new-article-date {
         display: none;
