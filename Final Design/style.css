@@ -32,11 +32,17 @@ h1 {
 .dark{
   background-color: #21252e;
   color: #ccc;
-  padding-bottom: 15px;
-  font-size: 15px;
-
+}
+.dark-p{
+  font-size: 7px;
+  background-color: #21252e;
+  color: #ccc;
 }
 
+.copyrigth{
+  padding: 15px;
+  font-size: 15px;
+}
 .dropdown .dropdown-menu {
   border-radius:0;
  }
