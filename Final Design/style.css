@@ -12,6 +12,57 @@ body{
     margin-right: auto;
     margin-left: auto;
 }
+
+.navbar {
+  padding:0rem;
+  margin-bottom:2rem;
+}
+
+.dropdown .dropdown-menu {
+  border-radius:0;
+ }
+
+
+
+/* Medium devices (tablets, 768px and up) 
+The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  border-radius:0;
+ }
+}
+.icons{
+  margin-right:8px;
+  padding: 10px;
+}
+
+.first-nav{
+  padding: 10px;
+}
+
+.second-nav{
+  padding: 100px;
+}
+/* .kogo{
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  width: 200px;
+} */
+@media (max-width : 780){
+  .kogo{
+    display: none;
+  }
+}
+@media (max-width: 768px){
+  .scroll-down{
+    display: none;
+  }
+}
+
+
 /* .layout-wrap{
     background-color: #fff;
     position: relative;
