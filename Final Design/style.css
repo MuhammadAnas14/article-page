@@ -12,9 +12,13 @@ p {
     font-size: 1rem;
 }
 
+h1 {
+    margin-left: 25px;
+}
+
 .container {
     width: 100%;
-    padding-right: 20%;
+    padding-right: 15%;
     padding-left: 3%;
     margin-right: auto;
     margin-left: auto;
@@ -38,7 +42,7 @@ p {
 img.icon {
     width: 30px;
     transform: rotate(180deg);
-    /* padding: 5px; */
+    padding: 5px;
 }
 
 .two {
@@ -47,7 +51,7 @@ img.icon {
 
 img.icon-right {
     width: 30px;
-    /* padding: 5px; */
+    padding: 5px;
 }
 
 .article-heading {
@@ -114,8 +118,26 @@ img.ads {
     float: left;
 }
 
-h1 {
-    margin-left: 25px;
+.new-article-date {
+    background-color: #A9CF46;
+    font-style: normal;
+    font-weight: 100;
+    color: aliceblue;
+    margin-bottom: 0px;
+    font-size: 0.9rem;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+img.new-calender-icon {
+    padding-left: 3px;
+    padding-top: 0px;
+    width: 20px;
+}
+
+img.new-calender-flag {
+    width: 23px;
+    padding-left: 0px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -196,12 +218,59 @@ h1 {
     }
     img.ads {
         padding: 20px;
-        width: 380px;
+        width: 330px;
     }
 }
 
-@media screen and (min-width: 900px) {
+
+/* @media screen and (min-width: 900px) {
     html {
         font-size: 16px;
     }
+} */
+
+.box {
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    max-height: 600px;
+    text-align: left;
+    position: relative;
+    padding: 0 5px 0 5px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    background-color: #A9CF46;
+    padding: 5px;
+}
+
+h6 {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    background-color: #d3d3d3;
+}
+
+p {
+    font-size: 1em;
+    padding: 5px;
+    background-color: #EDEDED;
+    color: #555555;
+    margin-bottom: 0px;
+}
+
+button {
+    text-align: right;
+    padding: 5px;
+    float: right;
+    font-style: unset;
+    color: white;
+    background-color: #A9CF46;
+    font-family: sans-serif;
+    border-radius: 8px;
 }
