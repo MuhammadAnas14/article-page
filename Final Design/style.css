@@ -23,12 +23,18 @@ h1 {
     margin-right: auto;
     margin-left: auto;
 }
-<<<<<<< HEAD
-
 
 .navbar {
   padding:0rem;
   margin-bottom:2rem;
+}
+
+.dark{
+  background-color: #21252e;
+  color: #ccc;
+  padding-bottom: 15px;
+  font-size: 15px;
+
 }
 
 .dropdown .dropdown-menu {
@@ -50,13 +56,16 @@ The navbar toggle appears at this breakpoint */
   margin-right:8px;
   padding: 10px;
 }
+.top-nav{
+  margin-left: 10px;
+}
 
 .first-nav{
   padding: 10px;
 }
 
 .second-nav{
-  padding: 100px;
+  padding: 20 px;
 }
 /* .kogo{
   transform: translateX(-50%);
@@ -87,9 +96,6 @@ The navbar toggle appears at this breakpoint */
     height: 100%;
     width: 70%;
 } */
-=======
->>>>>>> 189ee8f49aa54575950d24ffbedd4cfe8a62efb3
-
 .top {
     background-color: #ededed;
     color: #555;
