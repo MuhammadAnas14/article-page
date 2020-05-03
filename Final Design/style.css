@@ -25,7 +25,7 @@ h1 {
     margin-top: 50px;
 }
 
-<<<<<<< HEAD .navbar {
+.navbar {
     padding: 0rem;
     margin-bottom: 2rem;
 }
@@ -80,7 +80,12 @@ The navbar toggle appears at this breakpoint */
 }
 
 .header-links{
-  padding:2px
+  padding:2px;
+  text-decoration: solid;
+}
+
+.subscribe{
+  font-size: 12px;
 }
 
 @media (max-width: 780) {
@@ -217,6 +222,7 @@ h1.sec-head {
     max-width: 99%;
     border-left: 7px solid #a9cf46;
     margin-left: -5px;
+    font-size: 20px;
 }
 
 .box {
