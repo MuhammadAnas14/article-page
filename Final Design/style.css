@@ -79,13 +79,9 @@ The navbar toggle appears at this breakpoint */
     padding: 20 px;
 }
 
-
-/* .kogo{
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-  width: 200px;
-} */
+.header-links{
+  padding:2px
+}
 
 @media (max-width: 780) {
     .kogo {
