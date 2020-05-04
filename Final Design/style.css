@@ -52,14 +52,14 @@ h1 {
 
 /* Medium devices (tablets, 768px and up) 
 The navbar toggle appears at this breakpoint */
-
+/* 
 @media (min-width: 768px) {
     .dropdown:hover .dropdown-menu {
         display: block;
         margin-top: 0;
         border-radius: 0;
     }
-}
+} */
 
 .icons {
     margin-right: 8px;
@@ -86,19 +86,6 @@ The navbar toggle appears at this breakpoint */
 .subscribe{
   font-size: 12px;
 }
-
-@media (max-width: 780) {
-    .kogo {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .scroll-down {
-        display: none;
-    }
-}
-
 .top {
     background-color: #ededed;
     color: #555;
@@ -306,7 +293,7 @@ button {
         color: #000000;
         margin: 0;
         background-color: #d3d3d3;
-        height=100px
+        height:100px
     }
     p.art-par {
         font-size: 1em;
@@ -320,6 +307,17 @@ button {
     h1.sec-head {
         margin-left: -10px;
     }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      border-radius: 0;
+  }
+  .navbar{
+    width: 100%;
+  }
+  .scroll-down {
+    display: none;
+}
 }
 
 @media only screen and (max-width: 500px) {
@@ -404,6 +402,9 @@ button {
         margin-left: 1px;
         max-width: 98%;
     }
+    .scroll-down {
+      display: none;
+  }
 }
 
 @media screen and (min-width: 900px) {
