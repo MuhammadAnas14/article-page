@@ -36,7 +36,7 @@ h1 {
 }
 
 .dark-p {
-    font-size: 7px;
+    font-size: 11px;
     background-color: #21252e;
     color: #ccc;
 }
@@ -49,7 +49,6 @@ h1 {
 .dropdown .dropdown-menu {
     border-radius: 0;
 }
-
 
 /* Medium devices (tablets, 768px and up) 
 The navbar toggle appears at this breakpoint */
