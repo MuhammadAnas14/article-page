@@ -8,15 +8,44 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+  function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
     <title>Article Page</title>
 </head>
 
 <body>
 
 <!--header-->
-<header>
+ <header>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
 
   <div class="navbar-toggler-right">
@@ -91,117 +120,119 @@
 
 </nav>
 </header>
-  
-  <!-- main body -->
-  <div class ="container .container-sm .container-md .container-lg">
-      <div class="row no-gutters">
-        <div class="right-part col-md-11">
-           <div class = "top"> 
-               <div class="one">
-                <a href = "#"><img class="icon" src="images/icon.png">NEXT</a>
-               </div>
-                <div class="two">
-                <a herf = "#">NEWS PAGE</a>
-                </div>
-                <div class="three">
-                  <a herf= "##">PREVIOUS PAGE<img class="icon-right" src="images/icon.png"></a>
-                 </div>
-            </div>
-                <div class="article-title">
-                    <h2 class="article-heading">Iron Ore</h2>
-                    <h5 class="article-date">
-                    <img class="calender-icon" src="images/Calendar.png">
-                    24-04-2020 12:00
-                    <img class="calender-flag" src="images/flag.png"></h5>
-                </div>
-                <img src="images/article-img.png" class="img-fluid" alt="Responsive image">  
-        <h3 class = "sub-heading">DCE Iron ore Futures Close lower on Friday</h3>
-        <div class = "main-article">
-          <p>
-          Shipments of Chinese Port side inventories of imported Iron ore continued this week, 
-          with the average daily shipments from port reaching 3.06 million tons, as mills in the 
-          North picked up pace, aggressively restocking inventories on account of the upcoming Labor Day holiday over May 1st -5th ,2020. 
-          Moreover, BHP and Rio Tinto at the recent announcement of production results, pointed out that while demand has fallen across 
-          the board, demand for high quality iron ore in China remained robust, with prices driven further up by seaborne disruptions amid COVID-19.
-        </p>
-        <p>
-          However, Eastern Chinese Mills reported plentiful inventories at plants and port, hence buying activity in the region remained muted.
-          Imported iron ore port stock prices remained volatile this week, declining for most part of the week, Spot prices of 62% Fe fines, 
-          FOT Qingdao were assessed at RMB680/t on Monday, however prices in the imported iron ore portside market declined over the week, settling at RMB670/t, 
-          down by RMB10/t or nearly 1.5% over the weeks trading.
-        </p>
-        <p>
-          The decline in prices of portside inventories could be attributed to steelmakers increasing their usage of domestic iron ore as margins for rebar have reportedly thinned in recent days. 
-          Market participants have reported, Chinese steelmakers gradually substituting imported fines with more domestic iron ore concentrates in their blast furnaces amid robust iron ore port prices, 
-          with the daily usage and stocks of domestic sintering concentrates at mills increasing during April.
-        </p>
-        <p>
-      <img src="images/article-subimage.png" class="img-fluid" alt="Responsive image">         </p>
-        <p>
-          Much like physical markets, iron ore futures contracts at the DCE experienced a volatile week, with the most actively traded September Iron Ore futures contract at the DCE i2009 opened at RMB620/t on Monday, 
-          however, futures declined by RMB13/t or nearly 2.1% during the week, closing at RMB607/t on Friday, April 24th, 2020. Iron Ore Futures however, proved resilient as compared to other commodities despite the US 
-          oil market crash this week, with WTI’s May futures contract finishing out Monday’s session at negative $37.63 a barrel; as oil demand remains at historical lows as a result of COVID-19 and with US crude storage capacity quickly filling up.
-        </p>
-        <p>
-          <strong>#ironore #domestic #imported #portside #seaborne</strong>
-        </p>
-        <p>
-          <strong>Rumaisa Asif</strong>
-        </p>
-      </div>
-      <h1 class="sec-head">RELATED POSTS</h1>
-       <div class="row justify-content-around">
-    <div class="col-md-3 box">
-                <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
-                <h5 class="new-article-date">
-                <img class="new-calender-icon" src="images/Calendar.png">
-                24-04-2020 12:00
-                <img class="new-calender-flag" src="images/flag.png"></h5>
-                <h6 class="art-head">Prices of High Grade Brazilian Fines continue resilience </h6>
-                <p class="art-par">Chinese Iron Ore Spot and Futures markets remained stable on Monday, as mills continued to actively restock inventories before ...
-                  <button href="##">Full Article</button> </p>
-                   </div>
-    <div class="col-md-3 box">
-        <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
-                <h5 class="new-article-date">
-                <img class="new-calender-icon" src="images/Calendar.png">
-                24-04-2020 12:00
-                <img class="new-calender-flag" src="images/flag.png"></h5>
-                 <h6 class="art-head">Iron Ore Futures reach Highest since August 2019 </h6>
-                <p class="art-par">Seaborne iron ore prices continued to rise over the weekend, with 62% Fe Fines gaining $1.55/dmt or 1.83%, to reach $86.35/dmt ...
-                  <button href="##">Full Article</button> </p>
-    </div>
-    <div class="col-md-3 box">
-        <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
-                <h5 class="new-article-date">
-                <img class="new-calender-icon" src="images/Calendar.png">
-                24-04-2020 12:00
-                <img class="new-calender-flag" src="images/flag.png"></h5>
-                 <h6 class="art-head">Supply tightness keeps 65% Fe Fines spot prices supported </h6>
-                <p class="art-par">Iron Ore futures at the Dalian Commodity Exchange closed lower than their previous close on Friday, however the decline was not...
-                  <button href="##">Full Article</button> </p> 
-    </div>
-    <div class="col-md-3 box">
-      <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
-                <h5 class="new-article-date">
-                <img class="new-calender-icon" src="images/Calendar.png">
-                24-04-2020 12:00
-                <img class="new-calender-flag" src="images/flag.png"></h5>
-                 <h6 class="art-head">Discussion: Chinese Iron Ore market Fundamentals </h6>
-                <p class="art-par">The Chinese Iron Ore market appears to be a core point of focus within the domestic commodity segments as activity shift contin...
-                  <button href="##">Full Article</button> </p>
-    </div>
-  </div>
-      </div>
-        <div class="left-part col-md-1">
-        <img class="ads" src="images/Ad1.jpg"><br>
-        <img class="ads" src="images/Ad2.jpg"><br>
-        <img class="ads" src="images/Ad3.jpg">
-         </div>
-</section>
-</div>
-</div>
 
+  <!-- main body -->
+<main class="article-page">
+  <section class="article-section">
+    <div class ="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-9">
+          <div class = "top"> 
+            <div class="one">
+              <a href = "#"><img class="icon" src="images/icon.png">NEXT</a>
+            </div>
+            <div class="two">
+              <a herf = "#">NEWS PAGE</a>
+            </div>
+            <div class="three">
+              <a herf= "##">PREVIOUS PAGE<img class="icon-right" src="images/icon.png"></a>
+            </div>
+          </div>
+          <div class="article-title">
+            <h2 class="article-heading">Iron Ore</h2>
+            <h5 class="article-date">
+            <img class="calender-icon" src="images/Calendar.png">
+            24-04-2020 12:00
+            <img class="calender-flag" src="images/flag.png"></h5>
+          </div>  
+          <img src="images/article-img.png" class="img-fluid" alt="Responsive image">  
+          <h3 class = "sub-heading">DCE Iron ore Futures Close lower on Friday</h3>
+          <div class = "main-article">
+            <p>
+              Shipments of Chinese Port side inventories of imported Iron ore continued this week, 
+              with the average daily shipments from port reaching 3.06 million tons, as mills in the 
+              North picked up pace, aggressively restocking inventories on account of the upcoming Labor Day holiday over May 1st -5th ,2020. 
+              Moreover, BHP and Rio Tinto at the recent announcement of production results, pointed out that while demand has fallen across 
+              the board, demand for high quality iron ore in China remained robust, with prices driven further up by seaborne disruptions amid COVID-19.
+            </p>
+            <p>
+              However, Eastern Chinese Mills reported plentiful inventories at plants and port, hence buying activity in the region remained muted.
+              Imported iron ore port stock prices remained volatile this week, declining for most part of the week, Spot prices of 62% Fe fines, 
+              FOT Qingdao were assessed at RMB680/t on Monday, however prices in the imported iron ore portside market declined over the week, settling at RMB670/t, 
+              down by RMB10/t or nearly 1.5% over the weeks trading.
+            </p>
+            <p>
+              The decline in prices of portside inventories could be attributed to steelmakers increasing their usage of domestic iron ore as margins for rebar have reportedly thinned in recent days. 
+              Market participants have reported, Chinese steelmakers gradually substituting imported fines with more domestic iron ore concentrates in their blast furnaces amid robust iron ore port prices, 
+              with the daily usage and stocks of domestic sintering concentrates at mills increasing during April.
+            </p>
+            <p>
+              <img src="images/article-subimage.png" class="img-fluid" alt="Responsive image">         </p>
+            <p>
+              Much like physical markets, iron ore futures contracts at the DCE experienced a volatile week, with the most actively traded September Iron Ore futures contract at the DCE i2009 opened at RMB620/t on Monday, 
+              however, futures declined by RMB13/t or nearly 2.1% during the week, closing at RMB607/t on Friday, April 24th, 2020. Iron Ore Futures however, proved resilient as compared to other commodities despite the US 
+              oil market crash this week, with WTI’s May futures contract finishing out Monday’s session at negative $37.63 a barrel; as oil demand remains at historical lows as a result of COVID-19 and with US crude storage capacity quickly filling up.
+            </p>
+            <p>
+              <strong>#ironore #domestic #imported #portside #seaborne</strong>
+            </p>
+            <p>
+              <strong>Rumaisa Asif</strong>
+            </p>
+          </div>  
+          <h1 class="sec-head">RELATED POSTS</h1>
+          <div class="row justify-content-around">
+            <div class="col-md-3 box">
+              <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
+              <h5 class="new-article-date">
+              <img class="new-calender-icon" src="images/Calendar.png">
+              24-04-2020 12:00
+              <img class="new-calender-flag" src="images/flag.png"></h5>
+              <h6 class="art-head">Prices of High Grade Brazilian Fines continue resilience </h6>
+              <p class="art-par">Chinese Iron Ore Spot and Futures markets remained stable on Monday, as mills continued to actively restock inventories before ...
+              <button href="##">Full Article</button> </p>
+            </div>
+            <div class="col-md-3 box">
+              <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
+              <h5 class="new-article-date">
+              <img class="new-calender-icon" src="images/Calendar.png">
+              24-04-2020 12:00
+              <img class="new-calender-flag" src="images/flag.png"></h5>
+              <h6 class="art-head">Iron Ore Futures reach Highest since August 2019 </h6>
+              <p class="art-par">Seaborne iron ore prices continued to rise over the weekend, with 62% Fe Fines gaining $1.55/dmt or 1.83%, to reach $86.35/dmt ...
+              <button href="##">Full Article</button> </p>
+            </div>
+            <div class="col-md-3 box">
+              <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
+              <h5 class="new-article-date">
+              <img class="new-calender-icon" src="images/Calendar.png">
+              24-04-2020 12:00
+              <img class="new-calender-flag" src="images/flag.png"></h5>
+              <h6 class="art-head">Supply tightness keeps 65% Fe Fines spot prices supported </h6>
+              <p class="art-par">Iron Ore futures at the Dalian Commodity Exchange closed lower than their previous close on Friday, however the decline was not...
+              <button href="##">Full Article</button> </p> 
+            </div>
+            <div class="col-md-3 box">
+            <img src="images/sample.png" class="img-fluid new-art" alt="Responsive image">
+            <h5 class="new-article-date">
+            <img class="new-calender-icon" src="images/Calendar.png">
+            24-04-2020 12:00
+            <img class="new-calender-flag" src="images/flag.png"></h5>
+            <h6 class="art-head">Discussion: Chinese Iron Ore market Fundamentals </h6>
+            <p class="art-par">The Chinese Iron Ore market appears to be a core point of focus within the domestic commodity segments as activity shift contin...
+            <button href="##">Full Article</button> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-3">
+          <img class="ads" src="images/Ad1.jpg"><br>
+          <img class="ads" src="images/Ad2.jpg"><br>
+          <img class="ads" src="images/Ad3.jpg">
+        </div>
+      </div>
+    </div>
+  </section>  
+</main>
 
 <footer class="page-footer font-small text-white dark pt-4">
 
@@ -209,18 +240,18 @@
   <div class="container">
     
     <div class= "row">
-      <div class="col-6 text-md-left" style= "margin-top:25px;">
+      <div class="col-lg-6 col-md-6  text-md-left">
         <h5 class = "subscribe"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</h5>
-        <form class="input-group">
+        <form class="input-group footer-form">
         <input type="text" class="form-control form-control-sm" placeholder="Enter Your Email"
             aria-label="Your email" aria-describedby="basic-addon2">
           <div class="input-group-append">
             <button class="btn btn-sm btn-outline-white my-0 " style= "background-color: #A9CF46;" type="button">Subscribe</button>
           </div>
         </form>
-        <h5 class = "subscribe" style="padding-top:4px">By sharing your email, You agree to our <strong>Terms of Use</strong> & <strong>Privacy Policy</strong></h5>
+        <h5 class = "subscribe">By sharing your email, You agree to our <strong>Terms of Use</strong> & <strong>Privacy Policy</strong></h5>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
         <h5 class=" text-uppercase" style="color: #ddd; 
         margin-bottom: 10px;">Company</h5>
 
@@ -239,7 +270,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
         <h5 class=" text-uppercase" style="color: #ddd;
     margin-bottom: 10px;">ACCOUNT</h5>
 
@@ -351,11 +382,11 @@
 
   </div>
   <!-- Footer Links -->
-
+</footer>
+  <script>includeHTML();</script>
   <script src="js/jquery-3.4.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-</footer>
 </body>
 
 
